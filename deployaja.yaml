@@ -1,0 +1,10 @@
+name: demo-deployaja
+description: Simple web application with nginx and postgres
+container:
+    image: nginx:latestghcr.io/lukluk/demo-deployaja:latest
+    port: 3000
+resources:
+    cpu: 500m
+    memory: 1Gi
+    replicas: 1
+
