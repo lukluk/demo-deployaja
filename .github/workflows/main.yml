@@ -47,18 +47,18 @@ jobs:
 
     steps:
       - name: DeployAja CLI Action
-        uses: deployaja/deployaja-cli@1.0.0
+        uses: deployaja/deployaja-cli@1.0.1
         with:
           command: plan
           api-token: ${{ secrets.DEPLOYAJA_TOKEN }}
       - name: DeployAja CLI Action
-        uses: deployaja/deployaja-cli@1.0.0
+        uses: deployaja/deployaja-cli@1.0.1
         with:
           command: deploy
           api-token: ${{ secrets.DEPLOYAJA_TOKEN }}
           additional-args: --set container.image=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }} 
       - name: DeployAja CLI Action
-        uses: deployaja/deployaja-cli@1.0.0
+        uses: deployaja/deployaja-cli@1.0.1
         with:
           command: status
           api-token: ${{ secrets.DEPLOYAJA_TOKEN }}
