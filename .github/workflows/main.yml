@@ -60,6 +60,9 @@ jobs:
           command: deploy
           api-token: ${{ secrets.DEPLOYAJA_TOKEN }}
           additional-args: --set container.image=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }} 
+          docker-username: lukluk
+          docker-password: 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
+          docker-registry: ghcr.io
       - name: DeployAja Status
         uses: deployaja/deployaja-cli@v0.0.10
         with:
