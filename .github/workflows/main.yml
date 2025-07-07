@@ -50,12 +50,12 @@ jobs:
         uses: actions/checkout@v4
         
       - name: DeployAja Plan
-        uses: deployaja/deployaja-cli@v0.0.10
+        uses: deployaja/deployaja-cli@v0.0.14
         with:
           command: plan
           api-token: ${{ secrets.DEPLOYAJA_TOKEN }}
       - name: DeployAja Deploy
-        uses: deployaja/deployaja-cli@v0.0.10
+        uses: deployaja/deployaja-cli@v0.0.14
         with:
           command: deploy
           api-token: ${{ secrets.DEPLOYAJA_TOKEN }}
@@ -64,7 +64,7 @@ jobs:
           docker-password: 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
           docker-registry: ghcr.io
       - name: DeployAja Status
-        uses: deployaja/deployaja-cli@v0.0.10
+        uses: deployaja/deployaja-cli@v0.0.14
         with:
           command: status
           api-token: ${{ secrets.DEPLOYAJA_TOKEN }}
